@@ -1,0 +1,42 @@
+package com.dojo.counter;
+
+//add
+import org.springframework.stereotype.Controller;
+
+//add
+import org.springframework.web.bind.annotation.RequestMapping;
+
+//new import : HttpSession
+import jakarta.servlet.http.HttpSession;
+
+//add
+@Controller
+@RequestMapping("/your_server")
+public class CounterController {
+	// home
+	@RequestMapping("")
+	public String index(HttpSession session) {
+
+		// Add attribute session
+		session.setAttribute("name", "sara");
+
+		return "index.jsp";
+	}
+
+	// count
+	@RequestMapping("/counter")
+	public String count(HttpSession session) {
+
+		// If the count is not already in session
+		if (session.getAttribute("count") == null) {
+			// Use setAttribute to initialize the count in session
+			session.setAttribute("count", 0);
+		} else {
+			// increment the count by 1 using getAttribute and setAttribute
+			Integer countNumber = (Integer) session.getAttribute("count");
+			session.setAttribute("count", countNumber += 1);
+		}
+		return "countOne.jsp";
+	}
+
+}

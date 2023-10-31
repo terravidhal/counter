@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+D:\TERRA_F\MES FORMATIONS1 TRIER\CERTIFICATION CODING DOJO\CodingDojo\java\java_Spring\counter\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4275178400.index
+\counter\src\main\java

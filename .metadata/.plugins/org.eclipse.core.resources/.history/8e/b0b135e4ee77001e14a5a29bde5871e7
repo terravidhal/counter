@@ -1,0 +1,5 @@
+package com.dojo.counter;
+
+public class CounterController {
+
+}
